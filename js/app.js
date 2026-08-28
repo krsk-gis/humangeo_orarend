@@ -51,7 +51,7 @@
       nameSpan.textContent = t.name;
       var countSpan = document.createElement("span");
       countSpan.className = "lesson-count";
-      countSpan.textContent = t.lessons.length + " óra";
+      countSpan.textContent = t.lessons.length + " kurzus";
       btn.appendChild(nameSpan);
       btn.appendChild(countSpan);
       btn.addEventListener("click", function () {
