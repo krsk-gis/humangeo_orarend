@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Órarend kereső — Társadalomföldrajz Tanszék</title>
+<meta name="description" content="Órarend kereső a Szegedi Tudományegyetem Társadalomföldrajz Tanszék oktatóinak óráihoz.">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <img src="assets/logo.svg" alt="" class="logo" width="40" height="40">
+    <div class="header-text">
+      <p class="eyebrow">Szegedi Tudományegyetem &middot; Társadalomföldrajz Tanszék</p>
+      <h1>Órarend kereső</h1>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="search-section" aria-label="Oktató keresése">
+    <label for="teacher-search" class="search-label">Oktató neve</label>
+    <div class="search-box">
+      <input
+        type="text"
+        id="teacher-search"
+        placeholder="Kezdje el gépelni az oktató nevét…"
+        autocomplete="off"
+        aria-expanded="false"
+        aria-controls="teacher-results"
+        role="combobox"
+        aria-autocomplete="list"
+      >
+      <button type="button" id="clear-search" class="clear-btn" aria-label="Keresés törlése" hidden>&times;</button>
+    </div>
+    <ul id="teacher-results" class="teacher-results" role="listbox"></ul>
+  </section>
+
+  <section id="schedule-section" class="schedule-section" hidden>
+    <div class="schedule-header">
+      <button type="button" id="back-btn" class="back-btn">&larr; Vissza a listához</button>
+      <h2 id="schedule-teacher-name"></h2>
+    </div>
+    <div id="schedule-content"></div>
+  </section>
+
+  <p id="empty-state" class="empty-state">Válasszon egy oktatót a kereséssel a fenti mezőben az órarendjének megtekintéséhez.</p>
+</main>
+
+<footer class="site-footer">
+  <p>Társadalomföldrajz Tanszék &middot; Szegedi Tudományegyetem &middot; 2026/2027-es tanév</p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

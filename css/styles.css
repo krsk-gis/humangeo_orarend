@@ -1,0 +1,280 @@
+:root {
+  --navy: #1c3357;
+  --navy-dark: #12233d;
+  --wine: #6e2145;
+  --green: #2f8f52;
+  --gray: #6b7280;
+  --gray-light: #e5e7eb;
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #1f2430;
+  --radius: 10px;
+  --shadow: 0 1px 2px rgba(20, 30, 50, 0.06), 0 1px 8px rgba(20, 30, 50, 0.05);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.header-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  flex-shrink: 0;
+  display: block;
+}
+
+.header-text .eyebrow {
+  margin: 0 0 2px;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--wine);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+}
+
+.search-section {
+  position: relative;
+}
+
+.search-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray);
+  margin-bottom: 6px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#teacher-search {
+  width: 100%;
+  padding: 13px 42px 13px 16px;
+  font-size: 1rem;
+  border: 1.5px solid var(--gray-light);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+#teacher-search:focus {
+  border-color: var(--navy);
+}
+
+.clear-btn {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--gray);
+  cursor: pointer;
+  padding: 6px 8px;
+}
+
+.clear-btn:hover { color: var(--text); }
+
+.teacher-results {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.teacher-results:empty {
+  box-shadow: none;
+}
+
+.teacher-results li {
+  background: var(--surface);
+}
+
+.teacher-results li + li {
+  border-top: 1px solid var(--gray-light);
+}
+
+.teacher-results button {
+  width: 100%;
+  text-align: left;
+  padding: 13px 16px;
+  background: none;
+  border: none;
+  font-size: 0.98rem;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.teacher-results button:hover,
+.teacher-results button:focus {
+  background: #f0f2f6;
+}
+
+.teacher-results .lesson-count {
+  font-size: 0.78rem;
+  color: var(--gray);
+  flex-shrink: 0;
+}
+
+.empty-state {
+  margin-top: 40px;
+  color: var(--gray);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.schedule-section {
+  margin-top: 8px;
+}
+
+.schedule-header {
+  margin-bottom: 18px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 0;
+  margin-bottom: 10px;
+}
+
+.back-btn:hover { text-decoration: underline; }
+
+#schedule-teacher-name {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--navy);
+}
+
+.day-group {
+  margin-bottom: 22px;
+}
+
+.day-group h3 {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--wine);
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.lesson-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.lesson-card + .lesson-card {
+  margin-top: 8px;
+}
+
+.lesson-time {
+  flex-shrink: 0;
+  min-width: 58px;
+  font-weight: 700;
+  color: var(--navy);
+  font-variant-numeric: tabular-nums;
+}
+
+.lesson-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.lesson-course {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.lesson-room {
+  margin-top: 3px;
+  font-size: 0.88rem;
+  color: var(--gray);
+}
+
+.lesson-room::before {
+  content: "\2013\ ";
+}
+
+.no-room {
+  font-size: 0.82rem;
+  color: var(--gray);
+  font-style: italic;
+}
+
+.no-lessons {
+  color: var(--gray);
+  font-size: 0.95rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 24px 20px 32px;
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 480px) {
+  .header-text h1 { font-size: 1.15rem; }
+  .logo { width: 34px; height: 34px; }
+  main { padding: 22px 14px 50px; }
+}
