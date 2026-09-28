@@ -220,10 +220,11 @@ main {
 
 .lesson-time {
   flex-shrink: 0;
-  min-width: 58px;
+  min-width: 92px;
   font-weight: 700;
   color: var(--navy);
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 .lesson-details {
